@@ -343,7 +343,7 @@ with tab2:
 # Added footer with the requested line
 st.markdown("""
 <div class="footer">
-    Made for the Future17 Program 2025 | Group 1 | Raghav Arya
+    Made for the Future17 Program 2025
 </div>
 """, unsafe_allow_html=True)
 
