@@ -264,25 +264,28 @@ with tab1:
                              placeholder="Example: Our product is 100% eco-friendly and sustainable...")
 
     if st.button("Analyze for Greenwashing", type="primary"):
-        st.markdown("### Analysis Results", unsafe_allow_html=True)
-        st.markdown(check_greenwashing(user_text), unsafe_allow_html=True)
+        if not user_text or not user_text.strip():
+            st.warning("Please enter some text to analyze")
+        else:
+            st.markdown("### Analysis Results", unsafe_allow_html=True)
+            st.markdown(check_greenwashing(user_text), unsafe_allow_html=True)
 
-        st.markdown("### Text Preview with Highlighted Terms", unsafe_allow_html=True)
-        highlighted_text = highlight_terms(user_text) if user_text else "No text to analyze"
-        st.markdown(
-            f"""
-            <div style='
-                border: 1px solid #333333;
-                padding: 20px;
-                border-radius: 8px;
-                background-color: var(--card-bg);
-                margin-top: 10px;
-            '>
-                {highlighted_text}
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+            st.markdown("### Text Preview with Highlighted Terms", unsafe_allow_html=True)
+            highlighted_text = highlight_terms(user_text) if user_text else "No text to analyze"
+            st.markdown(
+                f"""
+                <div style='
+                    border: 1px solid #333333;
+                    padding: 20px;
+                    border-radius: 8px;
+                    background-color: var(--card-bg);
+                    margin-top: 10px;
+                '>
+                    {highlighted_text}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
 with tab2:
     st.header("Green Marketing Case Studies")
@@ -343,3 +346,13 @@ st.markdown("""
     Made for the Future17 Program 2025 | Group 1 | Raghav Arya
 </div>
 """, unsafe_allow_html=True)
+
+from pyngrok import ngrok
+
+# Set your ngrok auth token (replace with your actual token)
+#ngrok.set_auth_token("2utVL4v2NHpgo7GDD2h4YW8xITK_7b6QU3BNC7oWhHvueA7QS")
+
+# Start Streamlit as usual
+#if __name__ == "__main__":
+    #public_url = ngrok.connect(8517)
+    #print(f"Ngrok URL: {public_url}")
