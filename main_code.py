@@ -340,7 +340,6 @@ with tab2:
         </div>
         """, unsafe_allow_html=True)
 
-# Added footer with the requested line
 st.markdown("""
 <div class="footer">
     Made for the Future17 Program 2025
