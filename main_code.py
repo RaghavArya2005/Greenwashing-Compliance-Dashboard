@@ -120,7 +120,6 @@ st.markdown(
         color: var(--text-muted);
         font-size: 14px;
     }
-    #MainMenu { visibility: hidden; }
     </style>
     """,
     unsafe_allow_html=True
