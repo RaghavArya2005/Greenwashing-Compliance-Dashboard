@@ -347,12 +347,3 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-from pyngrok import ngrok
-
-# Set your ngrok auth token (replace with your actual token)
-#ngrok.set_auth_token("2utVL4v2NHpgo7GDD2h4YW8xITK_7b6QU3BNC7oWhHvueA7QS")
-
-# Start Streamlit as usual
-#if __name__ == "__main__":
-    #public_url = ngrok.connect(8517)
-    #print(f"Ngrok URL: {public_url}")
