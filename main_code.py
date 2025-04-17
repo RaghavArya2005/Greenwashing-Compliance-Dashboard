@@ -724,6 +724,15 @@ elif selected == "about":
 
 st.markdown("""
 <div class="footer">
+    <a href="https://www.instagram.com/wonderwork.digital/" target="_blank" style="color: var(--text-muted); text-decoration: none; margin-right: 16px;">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="18" style="vertical-align: middle; margin-right: 6px; filter: invert(50%);">
+        @wonderwork.digital
+    </a>
+    <a href="https://www.linkedin.com/company/wonderwork-digital/" target="_blank" style="color: var(--text-muted); text-decoration: none;">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" width="18" style="vertical-align: middle; margin-right: 6px; filter: invert(50%);">
+        wonderwork-digital
+    </a>
+    <br>
     Made for the Future17 Program 2025
 </div>
 """, unsafe_allow_html=True)
