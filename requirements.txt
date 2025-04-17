@@ -1,4 +1,3 @@
-SentenceTransformer
-util
+sentence_transformers
 datetime
 collections
