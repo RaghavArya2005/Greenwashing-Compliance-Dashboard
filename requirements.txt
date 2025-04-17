@@ -1,3 +1,2 @@
 sentence_transformers
 datetime
-collections
