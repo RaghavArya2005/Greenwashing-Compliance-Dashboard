@@ -271,32 +271,46 @@ compliance_data = {
     }
 }
 
-# Expanded greenwashing terms with embeddings and categories
+#GREENWASHING TERMS
 greenwashing_terms = {
     # Vague sustainability terms
     "eco-friendly": {
-        "examples": ["H&M's 'Conscious Collection'", "BP's 'Keep Advancing' campaign"],
+        "examples": [
+            "A bottled water brand labeled 'eco-friendly' without details on bottle material or emissions",
+            "A fast fashion retailer promoting an 'eco collection' made from conventional cotton"
+        ],
         "alternatives": ["Specify exact environmental benefits (e.g., 'made with 50% recycled materials')"],
         "similar_phrases": ["environmentally friendly", "planet-friendly", "earth-conscious", "green", "eco-conscious"],
         "category": "Vague Claims"
     },
     "sustainable": {
-        "examples": ["Nestlé's 'Sustainable Packaging'", "Fast fashion sustainability claims"],
-        "alternatives": ["Define what aspect is sustainable (materials, production, etc.)",
-                         "Provide measurable targets"],
+        "examples": [
+            "A coffee brand claims 'sustainable farming' without disclosing sourcing or certification",
+            "A clothing company states 'our operations are sustainable' but lacks emissions or water usage data"
+        ],
+        "alternatives": [
+            "Define what aspect is sustainable (materials, production, etc.)",
+            "Provide measurable targets"
+        ],
         "similar_phrases": ["sustainably made", "sustainability-focused", "eco-sustainable", "green sustainable"],
         "category": "Vague Claims"
     },
 
     # Carbon/climate terms
     "carbon-neutral": {
-        "examples": ["Shell's 'Drive Carbon Neutral'", "Airlines' carbon neutral claims"],
+        "examples": [
+            "An airline offering 'carbon neutral flights' through offsetting without explaining how offsets work",
+            "A petrol company promoting 'carbon neutral petrol' using vague or unverifiable carbon credits"
+        ],
         "alternatives": ["Provide specific emission reduction figures", "Clarify if this includes offsets"],
         "similar_phrases": ["net-zero", "climate neutral", "zero-emissions", "carbon free", "carbon negative"],
         "category": "Carbon Claims"
     },
     "net-zero": {
-        "examples": ["Oil companies' net-zero pledges", "Corporate net-zero targets"],
+        "examples": [
+            "A tech company pledges to be 'net-zero by 2050' without any short-term goals",
+            "An oil firm claims 'net-zero' while expanding fossil fuel operations"
+        ],
         "alternatives": ["Provide detailed roadmap with interim targets", "Specify scope (1, 2, and 3 emissions)"],
         "similar_phrases": ["carbon neutral", "zero carbon", "climate positive", "carbon balanced"],
         "category": "Carbon Claims"
@@ -304,14 +318,19 @@ greenwashing_terms = {
 
     # Nature-related terms
     "natural": {
-        "examples": ["'Natural' gas marketing", "'All-natural' product claims"],
+        "examples": [
+            "'100% natural skincare' label on products containing synthetic preservatives",
+            "'Natural gas' marketed as clean energy without highlighting methane emissions"
+        ],
         "alternatives": ["Specify natural ingredients percentage", "Clarify processing methods"],
         "similar_phrases": ["all-natural", "naturally derived", "nature-based", "plant-based"],
         "category": "Natural Claims"
     },
     "biodegradable": {
-        "examples": ["'Biodegradable' plastics that require industrial facilities",
-                     "Products labeled biodegradable without timeframe"],
+        "examples": [
+            "'Biodegradable straws' that require industrial composting but are marketed as backyard compostable",
+            "Plastic bags labeled 'biodegradable' with no info on timeframe or breakdown conditions"
+        ],
         "alternatives": ["Specify degradation timeframe and conditions", "Provide certification details"],
         "similar_phrases": ["compostable", "naturally decomposing", "eco-degradable", "plant-degradable"],
         "category": "Natural Claims"
@@ -319,38 +338,52 @@ greenwashing_terms = {
 
     # Recycling terms
     "recyclable": {
-        "examples": ["Products labeled recyclable where facilities don't exist", "'Recyclable' single-use plastics"],
-        "alternatives": ["Specify recycling rates in target markets",
-                         "Clarify 'technically recyclable' vs 'actually recycled'"],
+        "examples": [
+            "Coffee cups labeled 'recyclable' but lined with plastic making them unrecyclable in most facilities",
+            "'Recyclable pouch' that only works in special programs not accessible to most consumers"
+        ],
+        "alternatives": [
+            "Specify recycling rates in target markets",
+            "Clarify 'technically recyclable' vs 'actually recycled'"
+        ],
         "similar_phrases": ["recycled content", "post-consumer recycled", "upcycled", "circular"],
         "category": "Recycling Claims"
     },
 
     # Energy terms
     "renewable energy": {
-        "examples": ["Companies using minimal renewables but making broad claims",
-                     "Energy providers with small green offerings"],
+        "examples": [
+            "A data center claims to run on '100% renewable energy' while only purchasing RECs (certificates)",
+            "An electricity provider advertises green energy, but only a small portion of supply is actually renewable"
+        ],
         "alternatives": ["Specify percentage of renewable energy used", "Provide timeline for full transition"],
         "similar_phrases": ["clean energy", "green power", "sustainable energy", "low-carbon energy"],
         "category": "Energy Claims"
     },
 
-    # New additions
+    # Agricultural claims
     "regenerative": {
-        "examples": ["Food brands using regenerative without certification",
-                     "Fashion brands with minimal regenerative practices"],
+        "examples": [
+            "A food brand labels a single ingredient as 'regenerative' without third-party verification",
+            "A fashion label uses 'regenerative cotton' for one product line but promotes it as brand-wide change"
+        ],
         "alternatives": ["Provide certification details", "Specify acreage/percentage using regenerative practices"],
         "similar_phrases": ["restorative", "climate-smart", "soil-positive", "carbon farming"],
         "category": "Agricultural Claims"
     },
+
+    # Plastic claims
     "ocean plastic": {
-        "examples": ["Products using minimal ocean plastic with prominent labeling",
-                     "Claims of 'saving' oceans while still producing plastic"],
+        "examples": [
+            "A brand highlights 'made with ocean plastic' when only a small portion of packaging is reclaimed",
+            "Products marketed as fighting ocean plastic while still wrapped in virgin plastic"
+        ],
         "alternatives": ["Specify percentage of ocean plastic used", "Provide collection verification"],
         "similar_phrases": ["marine plastic", "sea waste", "ocean-bound plastic", "recovered shoreline plastic"],
         "category": "Plastic Claims"
     }
 }
+
 
 
 # Generate embeddings for all terms and similar phrases
