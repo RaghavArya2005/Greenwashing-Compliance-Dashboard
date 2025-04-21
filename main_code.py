@@ -266,7 +266,7 @@ compliance_data = {
     },
     "EU": {
         "guideline": "Follow the EU Green Claims Directive. Ensure all environmental claims are truthful, accurate, and based on scientific evidence.",
-        "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_1661",
+        "link": "https://environment.ec.europa.eu/topics/circular-economy/green-claims_en",
         "icon": "🇪🇺"
     }
 }
