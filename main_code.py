@@ -1,7 +1,6 @@
 import streamlit as st
 import re
 from sentence_transformers import SentenceTransformer, util
-import numpy as np
 from datetime import datetime
 from collections import defaultdict
 
