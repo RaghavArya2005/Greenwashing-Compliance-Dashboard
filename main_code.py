@@ -17,7 +17,7 @@ def load_model():
 model = load_model()
 
 
-# Enhanced Levenshtein distance function for spelling variations
+#Levenshtein distance function for spelling variations
 def levenshtein_distance(s1, s2):
     if len(s1) < len(s2):
         return levenshtein_distance(s2, s1)
@@ -90,7 +90,7 @@ def navigation():
     # Return the current tab
     return st.query_params.tab
 
-# Custom CSS with dark mode-inspired color scheme
+# Custom CSS
 st.markdown(
     """
     <style>
@@ -504,7 +504,7 @@ def check_greenwashing(text):
             mime="text/plain"
         )
 
-        # Simple output showing user's exact terms
+        # Simple output showing the user's exact terms
         st.markdown(f"""
         <div class='warning-box'>
             <h3 style='color: var(--warning);'>⚠️ Potential Greenwashing Detected</h3>
@@ -548,7 +548,6 @@ def check_greenwashing(text):
 st.title("🌿 Sustainable Marketing Compliance Dashboard")
 selected = navigation()
 
-# Add some spacing
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Sidebar for country selection with flag icon
@@ -721,6 +720,7 @@ elif selected == "about":
     </div>
     """, unsafe_allow_html=True)
 
+# Footer and Company Socials
 st.markdown("""
 <div class="footer">
     <a href="https://www.instagram.com/wonderwork.digital/" target="_blank" style="color: var(--text-muted); text-decoration: none; margin-right: 16px;">
