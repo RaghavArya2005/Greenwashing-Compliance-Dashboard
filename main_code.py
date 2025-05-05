@@ -7,7 +7,6 @@ from collections import defaultdict
 # Set page config must be first
 st.set_page_config(layout="wide")
 
-
 # Then load other components
 @st.cache_resource
 def load_model():
